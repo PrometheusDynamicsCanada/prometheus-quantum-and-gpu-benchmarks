@@ -92,26 +92,26 @@ To evaluate execution quality across all five quantum hardware vendors accessibl
    - **Phase 1A Core Suite (8Q & 12Q `QAOA MaxCut` + `QFT`, 3 windows, 4,096 shots/circuit):** 24 ProgramSet tasks (72 circuits, 294,912 shots) = **`283.68 USD`** (`298.08 USD` if separate tasks).
    - **Phase 1B Optional High-Width All-to-All Extension (`17Q, 18Q, 19Q` Dense K_N, 3 windows, 4,096 shots/circuit):** +18 ProgramSet tasks (+54 circuits, +221,184 shots) = **`+212.76 USD`** (`496.44 USD` combined superconducting).
 2. **Phase 2 - Trapped-Ion All-to-All Native-Basis Compilation Suite (`AQT IBEX Q1` 12Q & `IonQ Forte 1` 36Q):**
-   - **AQT `IBEX Q1` (12Q, `eu-north-1`, `0.30 USD/task` + `0.0235 USD/shot`):** 4 workloads (6Q & 10Q `QFT` + `Dense All-to-All`) × 3 windows = **12 ProgramSet tasks (36 circuits)** at 250 shots/circuit (750 shots/task, 9,000 shots total) = **`215.10 USD`** (`222.30 USD` if separate tasks).
-   - **IonQ `Forte 1` (36Q, `us-east-1`, `0.30 USD/task` + `0.0800 USD/shot`):** 4 workloads (8Q & 12Q `QAOA MaxCut` + `QFT`) × 3 windows = **12 ProgramSet tasks (36 circuits)** at 100 shots/circuit (300 shots/task, 3,600 shots total) = **`291.60 USD`** (`298.80 USD` if separate tasks).
+   - **AQT `IBEX Q1` (12Q, `eu-north-1`, `$0.30/task` + `2.35c/shot`):** 4 workloads (6Q & 10Q `QFT` + `Dense All-to-All`) × 3 windows = **12 ProgramSet tasks (36 circuits)** at 250 shots/circuit (750 shots/task, 9,000 shots total) = **`215.10 USD`** (`222.30 USD` if separate tasks).
+   - **IonQ `Forte 1` (36Q, `us-east-1`, `$0.30/task` + `$0.08/shot`):** 4 workloads (8Q & 12Q `QAOA MaxCut` + `QFT`) × 3 windows = **12 ProgramSet tasks (36 circuits)** at 100 shots/circuit (300 shots/task, 3,600 shots total) = **`291.60 USD`** (`298.80 USD` if separate tasks).
    - **Phase 2 Trapped-Ion Subtotal (`AQT IBEX Q1` + `IonQ Forte 1`):** **`506.70 USD`** (24 ProgramSet tasks, 72 circuits, 12,600 shots).
 3. **Phase 3 - Neutral-Atom 2D Rydberg Blockade AHS Suite (`QuEra Aquila` 256Q):**
-   - **QuEra `Aquila` (256Q Neutral-Atom AHS, `us-east-1`, `0.30 USD/task` + `0.0100 USD/shot`):** 4 unit-disk Maximum Independent Set (MIS) register scales (16, 36, 64, and 100 Rubidium-87 atoms) × 3 windows = **`12 AHS tasks`** at 500 shots/task (6,000 shots total) = **`63.60 USD`**.
+   - **QuEra `Aquila` (256Q Neutral-Atom AHS, `us-east-1`, `$0.30/task` + `$0.01/shot`):** 4 unit-disk Maximum Independent Set (MIS) register scales (16, 36, 64, and 100 Rubidium-87 atoms) × 3 windows = **`12 AHS tasks`** at 500 shots/task (6,000 shots total) = **`63.60 USD`**.
 
 ### Table 3A - Complete Cross-Paradigm QPU Cost Breakdown Across All 5 AWS Braket Hardware Vendors
 
 | Phase / Target QPU | Architecture & Region | Workloads (3 Windows Each) | Batched Tasks (`Programs`) | Shots / Circuit (`Total Shots`) | Per-Shot Rate (`+ 0.30 USD/task`) | `ProgramSet` / AHS Total (USD) | Separate-Task Total (USD) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: |
-| **Phase 1A: Rigetti `Cepheus-1-108Q`** | 108Q Superconducting (`us-west-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 4,096 (147,456) | `0.000425 USD/shot` | **`66.27 USD`** | `73.47 USD` |
-| **Phase 1A: IQM `Garnet`** | 20Q Superconducting (`eu-north-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 4,096 (147,456) | `0.001450 USD/shot` | **`217.41 USD`** | `224.61 USD` |
+| **Phase 1A: Rigetti `Cepheus-1-108Q`** | 108Q Superconducting (`us-west-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 4,096 (147,456) | `0.0425c/shot` | **`66.27 USD`** | `73.47 USD` |
+| **Phase 1A: IQM `Garnet`** | 20Q Superconducting (`eu-north-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 4,096 (147,456) | `0.145c/shot` | **`217.41 USD`** | `224.61 USD` |
 | **Phase 1A Core Superconducting Subtotal** | **Rigetti + IQM (Core 8Q/12Q)** | **4 workloads** | **24 ProgramSets (72 circuits)** | **294,912 shots** | `Mixed rates` | **`283.68 USD`** | **`298.08 USD`** |
-| **Phase 1B: Rigetti `Cepheus-1` (Opt. 17Q-19Q)** | 108Q Superconducting (`us-west-1`) | 3 (`17Q, 18Q, 19Q K_N`) | 9 ProgramSets (27 circuits) | 4,096 (110,592) | `0.000425 USD/shot` | **`49.70 USD`** | `55.10 USD` |
-| **Phase 1B: IQM `Garnet` (Opt. 17Q-19Q)** | 20Q Superconducting (`eu-north-1`) | 3 (`17Q, 18Q, 19Q K_N`) | 9 ProgramSets (27 circuits) | 4,096 (110,592) | `0.001450 USD/shot` | **`163.06 USD`** | `168.46 USD` |
+| **Phase 1B: Rigetti `Cepheus-1` (Opt. 17Q-19Q)** | 108Q Superconducting (`us-west-1`) | 3 (`17Q, 18Q, 19Q K_N`) | 9 ProgramSets (27 circuits) | 4,096 (110,592) | `0.0425c/shot` | **`49.70 USD`** | `55.10 USD` |
+| **Phase 1B: IQM `Garnet` (Opt. 17Q-19Q)** | 20Q Superconducting (`eu-north-1`) | 3 (`17Q, 18Q, 19Q K_N`) | 9 ProgramSets (27 circuits) | 4,096 (110,592) | `0.145c/shot` | **`163.06 USD`** | `168.46 USD` |
 | **Phase 1B Superconducting Ext. Subtotal** | **Rigetti + IQM (17Q-19Q K_N)** | **3 workloads** | **18 ProgramSets (54 circuits)** | **221,184 shots** | `Mixed rates` | **`212.76 USD`** | **`223.56 USD`** |
-| **Phase 2: AQT `IBEX Q1`** | 12Q Trapped-Ion (`eu-north-1`) | 4 (`6Q/10Q QFT + K_N`) | 12 ProgramSets (36 circuits) | 250 (9,000) | `0.023500 USD/shot` | **`215.10 USD`** | `222.30 USD` |
-| **Phase 2: IonQ `Forte 1`** | 36Q Trapped-Ion (`us-east-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 100 (3,600) | `0.080000 USD/shot` | **`291.60 USD`** | `298.80 USD` |
+| **Phase 2: AQT `IBEX Q1`** | 12Q Trapped-Ion (`eu-north-1`) | 4 (`6Q/10Q QFT + K_N`) | 12 ProgramSets (36 circuits) | 250 (9,000) | `2.35c/shot` | **`215.10 USD`** | `222.30 USD` |
+| **Phase 2: IonQ `Forte 1`** | 36Q Trapped-Ion (`us-east-1`) | 4 (`8Q/12Q QAOA + QFT`) | 12 ProgramSets (36 circuits) | 100 (3,600) | `$0.08/shot` | **`291.60 USD`** | `298.80 USD` |
 | **Phase 2 Trapped-Ion Subtotal** | **AQT `IBEX Q1` + IonQ `Forte 1`** | **`4 workloads / QPU`** | **24 ProgramSets (72 circuits)** | **12,600 shots** | `Mixed rates` | **`506.70 USD`** | **`521.10 USD`** |
-| **Phase 3: QuEra `Aquila` (Neutral-Atom)** | 256Q Rydberg AHS (`us-east-1`) | 4 (`16, 36, 64, 100 Atom MIS`) | 12 AHS Tasks (`12 schedules`) | 500 (6,000) | `0.010000 USD/shot` | **`63.60 USD`** | **`63.60 USD`** |
+| **Phase 3: QuEra `Aquila` (Neutral-Atom)** | 256Q Rydberg AHS (`us-east-1`) | 4 (`16, 36, 64, 100 Atom MIS`) | 12 AHS Tasks (`12 schedules`) | 500 (6,000) | `$0.01/shot` | **`63.60 USD`** | **`63.60 USD`** |
 | **Core Cross-Paradigm Total (1A + 2 + 3)** | **All 5 Vendors (Core 6Q-12Q + AHS)** | **Superconducting + Ion + Atom** | **`60 Tasks` (`156 programs`)** | **313,512 shots** | `Mixed rates` | **`853.98 USD`** | **`882.78 USD`** |
 | **Full Cross-Paradigm Total (1A + 1B + 2 + 3)** | **All 5 Vendors (Full 6Q-100Q Suite)** | **All Phases Combined** | **`78 Tasks` (`210 programs`)** | **534,696 shots** | `Mixed rates` | **`1,066.74 USD`** | **`1,106.34 USD`** |
 
